@@ -27,7 +27,7 @@ export default function HomePage() {
 
   return (
     <header>
-      <div
+      {/* <div
         className="bg-cover bg-center w-full h-screen grayscale opacity-25"
         style={{ backgroundImage: "url(/media/elincarro.jpeg)" }}
       ></div>
@@ -37,7 +37,7 @@ export default function HomePage() {
         </h1>
         <p className="uppercase text-2xl font-bold">{countDownDate}</p>
         <p className="font-serif">2024-07-13</p>
-      </section>
+      </section> */}
     </header>
   );
 }

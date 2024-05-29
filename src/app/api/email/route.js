@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(request) {
-  const { email, name, message } = await request.json();
+  const { firstName, lastName, phone, plusOnes, song, hobby, wish, message } =
+    await request.json();
 
   const transport = nodemailer.createTransport({
     service: "gmail",
@@ -25,8 +26,22 @@ export async function POST(request) {
     from: process.env.MY_EMAIL,
     to: process.env.MY_EMAIL,
     // cc: email, (uncomment this line if you want to send a copy to the sender)
-    subject: `Message from ${name} (${email})`,
+    subject: `Dirty Thirty RSVP from ${firstName} ${lastName}`,
     text: message,
+    html: `<div>
+    <h1>Wohooo!</h1>
+    <p>Here comes more information from another attendee:</p>
+    <ul>
+        <li>First name: ${firstName}</li>
+        <li>Last name: ${lastName}</li>
+        <li>Phone: ${phone}</li>
+        <li>Plus ones: ${plusOnes}</li>
+        <li>Song: ${song}</li>
+        <li>Hobby: ${hobby}</li>
+        <li>Wish: ${wish}</li>
+        <li>Message: ${message}</li>
+    </ul>
+</div>`,
   };
 
   const sendMailPromise = () =>
@@ -42,7 +57,10 @@ export async function POST(request) {
 
   try {
     await sendMailPromise();
-    return NextResponse.json({ message: "Email sent" });
+    return NextResponse.json({
+      message: "Email sent",
+      name: `${firstName} ${lastName}`,
+    });
   } catch (err) {
     return NextResponse.json({ error: err }, { status: 500 });
   }

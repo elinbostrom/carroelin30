@@ -7,11 +7,31 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        "fade-in": {
+          "0%": {
+            opacity: 0,
+          },
+          "100%": {
+            opacity: 1,
+          },
+        },
+      },
+      animation: {
+        fadein: "fade-in 1s ease-in-out 0.5s 1",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+    },
+    fontFamily: {
+      sans: ["ui-sans-serif", "system-ui"],
+      serif: ["ui-serif", "Georgia"],
+      mono: ["ui-monospace", "SFMono-Regular"],
+      display: ["Oswald"],
+      body: ['"Open Sans"'],
     },
     fontSize: {
       sm: "0.8rem",
@@ -23,6 +43,11 @@ module.exports = {
       "5xl": "3.052rem",
     },
     maxWidth: {
+      112: "24rem",
+      128: "32rem",
+    },
+    maxHeight: {
+      112: "24rem",
       128: "32rem",
     },
   },

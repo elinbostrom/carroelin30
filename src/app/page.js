@@ -25,8 +25,10 @@ export default function Home() {
               </h1>
             </div>
             <div>
-              <p>13 Juli 2024</p>
+              <p>13 Juli 2024 14:00</p>
               <p>Österängs Gård</p>
+
+              <p className="mt-2 font-bold text-red-500">OSA senast 16/6</p>
             </div>
           </div>
           <Contact />

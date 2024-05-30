@@ -75,6 +75,17 @@ const Contact = () => {
 
         <input
           type="radio"
+          value="+0"
+          id="+0"
+          {...register("plusOnes", { required: true })}
+          />
+          <label htmlFor="+0" className="text-black">Solo 💃🏼</label>
+          </div>
+      
+        <div className="flex align-middle gap-2">
+
+        <input
+          type="radio"
           value="+1"
           id="+1"
           {...register("plusOnes", { required: true })}

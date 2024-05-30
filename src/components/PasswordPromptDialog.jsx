@@ -31,7 +31,9 @@ return (
   <div className="absolute top-0 w-full h-full p-4 grid content-center text-center justify-center ">
     <caption className="italic text-xl font-body">Carro & Elin</caption>
     <h1 className="text-2xl font-bold uppercase animate-pulse">Dirty Thirty Summerbash!</h1>
-    <p className="pb-6">Dags att OSA till sommarens höjdpunkt!</p>
+    <p>Dags att anmäla sig till sommarens höjdpunkt!</p>
+    <p className="mt-2 font-bold text-red-500 pb-6">OSA senast 16/6</p>
+
     <form onSubmit={handleSubmit(onSubmit)} className="w-full grid gap-4 lg:max-w-128 z-10 h-full content-center bg-slate-100 p-4 text-black rounded-md">
       <label htmlFor="password" className="font-bold">Lösenord:</label>
       <input

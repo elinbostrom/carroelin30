@@ -2,7 +2,7 @@
 
 import { useForm } from "react-hook-form";
 import { sendEmail } from "@/utils/send-email";
-import {useState} from 'react'
+import { useState } from 'react'
 
 const Contact = () => {
   const { register, handleSubmit } = useForm();
@@ -63,57 +63,7 @@ const Contact = () => {
           {...register("phone", { required: true })}
         />
       </div>
-      <div className="mb-5">
-        <label
-          htmlFor="plusOnes"
-          className="block text-base font-medium text-black mb-4"
-        >
-         Jag tar med mig ... buddies
-          <p className="text-black italic text-sm pt-2">Pssst... de är okej om du ej vet! Men vi vill ha ett hummm.</p>
-        </label>
-        <div className="flex align-middle gap-2">
 
-        <input
-          type="radio"
-          value="+0"
-          id="+0"
-          {...register("plusOnes", { required: true })}
-          />
-          <label htmlFor="+0" className="text-black">Solo 💃🏼</label>
-          </div>
-      
-        <div className="flex align-middle gap-2">
-
-        <input
-          type="radio"
-          value="+1"
-          id="+1"
-          {...register("plusOnes", { required: true })}
-          />
-          <label htmlFor="+1" className="text-black">+1</label>
-          </div>
-<div className="flex align-middle gap-2">
-
-        <input
-          type="radio"
-          value="+2"
-          id="+2"
-          {...register("plusOnes", { required: true })}
-          />
-          <label htmlFor="+2" className="text-black">+2</label>
-          </div>
-         
-          <div className="flex align-middle gap-2">
-
-        <input
-          type="radio"
-          value="+3"
-          id="+3"
-          {...register("plusOnes", { required: true })}
-          />
-          <label htmlFor="+3" className="text-black">+3</label>
-          </div>
-      </div>
       <div className="mb-5">
         <label
           htmlFor="song"

@@ -16,22 +16,58 @@ export default function Home() {
       {!isLoggedIn ? (
         <PasswordPromptDialog />
       ) : (
-        <div className="absolute top-0 md:top-48 grid lg:grid-cols-2 w-full px-4 lg:px-40 gap-8 items-center content-center animate-fadeIn my-6">
-          <div className="text-zinc-300 text-center grid gap-4 pt-4 md:pt-0">
-            <div>
-              <p className="italic text-xl font-body">Carro & Elin</p>
-              <h1 className="pb-6 text-2xl font-bold uppercase animate-pulse">
-                Dirty Thirty Summerbash!
-              </h1>
+        <div className="absolute top-0 md:top-48 grid  w-full px-4  items-center content-center animate-fadeIn my-6">
+          <caption className="italic text-xl font-body">Carro & Elin</caption>
+          <h1 className="text-2xl font-bold uppercase animate-pulse m-auto text-center">
+            Dirty Thirty Summerbash!
+          </h1>
+          <div className="bg-white rounded-md my-2 text-black p-4 md:max-w-128 mx-auto">
+            <ul>
+              <li>
+                <strong>Datum:</strong> 13 juli
+              </li>
+              <li>
+                <strong>Tid:</strong> 14:00
+              </li>
+              <li>
+                <strong>Klädkod:</strong> Sommarfin 🌻☀️
+              </li>
+              <li>
+                <strong>Skjuts från Gudö:</strong> 14:15 , det är ca 3km
+                promenad från Gudö busshållplats. Vill du ha skjuts så får du
+                gärna säga till! Skriv till{" "}
+                <a
+                  href="mailto:helloelinbostrom@gmail.com"
+                  className="italic underline"
+                >
+                  helloelinbostrom@gmail.com
+                </a>{" "}
+                för att boka skjuts.
+              </li>
+            </ul>
+            <hr className="my-4" />
+            <div className="grid gap-4 text-center px-4">
+              <p>
+                Vi ser framemot att fira 30 år med er! Med skratt, påhitt och
+                dans i lite "gammaldags" hemmafest anda.
+              </p>
+              <p>
+                Mat & dryck till maten bjuds på, men ta med extra dryck om du är
+                extra partysugen 🎉
+              </p>
+              <p className="font-bold">Välkomna! 😃💃🏼</p>
             </div>
-            <div>
-              <p>13 Juli 2024 14:00</p>
-              <p>Österängs Gård</p>
-
-              <p className="mt-2 font-bold text-red-500">OSA senast 16/6</p>
-            </div>
+            <hr className="my-4" />
+            <p className="text-sm">
+              Har du inte registrerat dig än? Eller är du en "+1" och behöver
+              fylla i information? Klicka på knappen nedan:
+            </p>
+            <a href="/register">
+              <p className="rounded-md py-2 px-4 bg-orange-300 text-white font-bold mt-4 text-center hover:cursor-pointer">
+                Registrera dig
+              </p>
+            </a>
           </div>
-          <Contact />
         </div>
       )}
     </main>
